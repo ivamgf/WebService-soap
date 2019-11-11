@@ -14,8 +14,8 @@ try {
         // Settings Soap
        
         // Create the Auth instance
-        $user        = "06096391000176";
-        $password    = "33BPM@06096391000176";
+        $user        = "";
+        $password    = "";
         $auth = array(
              'login' => $user,
              'password' => $password,
@@ -26,11 +26,11 @@ try {
         $ano_calculo = 2019;
         $data_base_calculo = 26/08/2019;
         $codigo_sub_receita = 999;
-        $cpfcnpj = "074.633.689-63";
+        $cpfcnpj = "99999999999999";
         $codigo_bloco = 44;
         $codigo_item = 1;
         $sequencia_item = 1;
-        $valor = 150.25;
+        $valor = 999.99;
         $ano_forma_pagamento = 0;
         $codigo_forma_pagamento = 4;
         $quantidade_parcelas = 1;
@@ -55,7 +55,7 @@ try {
                         'data_base_vencimento'=>$data_base_vencimento
                      );
         // Create the SoapClient instance
-        $url    = "https://homologacao.atende.net/atende.php?pg=services&service=WGTLancamentoTributario&cidade=brusque";        
+        $url    = "";        
         echo "Testando 1";
         $client = new SoapClient($url, $params);
         echo "Testando 2";
