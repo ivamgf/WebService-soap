@@ -1,6 +1,8 @@
 # WebService-soap
 WebService soap 1.2 project
 
+![Logo Soap](logo-soap.jpg)
+
 ## Project Dependencies
 
 To create a php web service you need the following dependencies,
