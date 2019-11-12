@@ -2,14 +2,24 @@
 try {
         // Settings Soap
         // ======================================================================================================
-        $arrContextOptions=array("ssl"=>array( "verify_peer"=>false, "verify_peer_name"=>false,'crypto_method' => STREAM_CRYPTO_METHOD_TLS_CLIENT));
-       
         // options for ssl in php 5.6.5
         $opts = array(
-            'ssl' => array('ciphers'=>'RC4-SHA', 'verify_peer'=>false, 'verify_peer_name'=>false)
+            'ssl' => array(
+                'encoding' => 'UTF-8', 
+                'ciphers'=>'RC4-SHA',
+                'verify_peer'=>false, 
+                'verify_peer_name'=>false,
+                'verifyhost' => false, 
+                'soap_version' => SOAP_1_2, 
+                'trace' => 1, 
+                'exceptions' => 1, 
+                "connection_timeout" => 180,
+                'crypto_method' => STREAM_CRYPTO_METHOD_TLS_CLIENT, 
+                'allow_self_signed' => true
+            )
         );
+        libxml_disable_entity_loader(false);
         // SOAP 1.2 client
-        $params = array ('encoding' => 'UTF-8', 'verifypeer' => false, 'verifyhost' => false, 'soap_version' => SOAP_1_2, 'trace' => 1, 'exceptions' => 1, "connection_timeout" => 180, 'stream_context' => stream_context_create($opts) );
         // ======================================================================================================
         // Settings Soap
        
