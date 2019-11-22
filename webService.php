@@ -12,7 +12,7 @@ try {
 
     // Settings Soap
     // =====================================================================================================================
-    $sEndWsdl = '';
+    $sEndWsdl = 'URL';
     $oCliente = new SoapClient($sEndWsdl, Array(
          'cache_wsdl' => WSDL_CACHE_NONE
         ,'encoding'   => 'ISO-8859-1'
